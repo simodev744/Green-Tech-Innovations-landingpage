@@ -5,51 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Webtech</title>
 </head>
 <body>
 
    <header>
-
        <div class="logo">
            <img src="assets/images/logo.png"   width="60px" height="60px"  alt="logo">
-           <h1>WebTech</h1>
+           <h1>GreenTech</h1>
        </div>
-        
        <nav class="nav1">
            <ul>
-               <li><a href="index.html">Home</a></li>
-               <li><a href="about.html">About</a></li>
-               <li><a href="contact.html">Contact</a></li>
-               <li><a href="projects.html">Projects</a></li>
-               <li><a href="blog.html">Blog</a></li>
+               <li><a href="#home">Accueil</a></li>
+               <li><a href="services.html">Services</a></li>
+               <li><a href="apropos.html">Apropos</a></li>
+               <li><a href="faq.html">FAQ</a></li>
+               <li><a href="contact.html">Contactez-nous</a></li>
            </ul>
        </nav>
    </header>
 
 
-   <div class="hero">
-
-    <div>
-        <h1  style="font-size:60px;"> Welcome to my portfolio</h1>
-    </div>
+    <div class="hero">
 
         <div>
-            <p>I am a web developer with a passion for creating beautiful and functional websites.</p>
-            
-        </div class="btn_hero">
-
-  
-         <button type="button">Decouvrez nos solutions</button>
-
-
-
-
-        <div>
-            <button type="button"></button>
+            <h1 id="hero-title" style="font-size: 60px;">hello</h1>
         </div>
 
-   </div>
+            <div>
+                <p>Découvrez comment nos solutions technologiques respectueuse de l’envirenement peut traansformer votre 
+                    avenir.</p>
+                
+            </div class="btn_hero">
+
+            <div class="btn">
+                <a href="services.html" > Decouvrez nos solutions</a>
+            </div>
+            
+          
+
+
+
+
+            <div>
+                <button type="button"></button>
+            </div>
+
+    </div>
 
    <div class="services">
 
@@ -59,18 +61,19 @@
    <div class="services-container">
 
      <div>
-         <img src="/assets/images/img1.jpg"  alt="html">
-         <p>web development</p>
+         <img src="/assets/images/img1.jpg" >
+         <p><a href="services.html">Consultation en Technologie verte</a> </p>
      </div>
 
      <div>
-         <img src="/assets/images/img4.jpg"  alt="css">
-         <p>energie renouvlable</p>
+         <img src="/assets/images/img4.jpg"  >
+         <p><a href="services.html">Solutions d’energie renouvelables</a> </p>
      </div>
 
      <div>
-         <img src="/assets/images/img3.jpg" alt="img1">
-         <p>javascript </p>
+         <img src="/assets/images/img3.jpg" >
+         <p><a href="services.html">Accompagnement
+            écoresponsable</a> </p>
      </div>
    </div>
 
@@ -82,7 +85,12 @@
 
     <p>Vous avez une question ? Besoin de  plus d’information,nous sommes là pour vous aider.</p>
 
-    <button type="button">Contactez nous</button>
+  
+
+    <div class="btn-div">
+   <a class="btn" href="contact.html"> Contactez-nous</a>
+    </div>
+
 
    </div>
 
@@ -91,40 +99,69 @@
     <div  class="footer-container">
     
         <img src="assets/images/logo.png" width="" alt="logo">
-        <p>description de la société</p>
+        <p>Technologies innovantes pour un futur respectueux de l’environnement.</p>
 
     </div>
 
     <div>
-
-        <h1>Services</h1>
+<ul>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="Apropos.html">Apropos</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+</ul>
     </div>
 
+    <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#privacy-policy">Privacy-Policy</a></li>
+    </ul>
+    <div> 
+        <ul>
+            <li><a href="apropos.html">Twitter</a></li>
+            <li><a href="services.html">Instagram</a></li>
+            <li><a href="faq.html">Facebook</a></li>
+        </ul>
+    </div>
     <div>
-        
-        <h1>Services</h1>
-    </div>
-
-    <div>
-        
-        <h1>Services</h1>
+        <ul>       
+            <li><a href="#">greenTech@appx.com</a></li>
+            <li><a href="#">06782233999</a></li>         
+        </ul>
     </div>
      
-
-    <div>
-        
-        <h1>Services</h1>
-    </div>
-     
-     
-     
-
-
    </footer>
-
-   <p>Copyright 2023</p>
-
-
-    
+   <div class="copyright">
+ <p>Copyright @ 2025. All Rights Reserved.</p>
+   </div>
+  
 </body>
+
+
+<script>
+
+   
+    const text = "Innover pour un avenir durable";  
+    let index = 0; 
+    const heroTitle = document.getElementById("hero-title");
+
+    function typeText() {
+        if (index < text.length) {
+            heroTitle.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeText, 100);  
+        } else {
+
+            setTimeout(() => {
+                index = 0;  
+                heroTitle.innerHTML = '';  
+                typeText();  
+            }, 1000);  
+        }
+    }
+
+  
+    window.onload = function() {
+        typeText();
+    };
+</script>
 </html>
